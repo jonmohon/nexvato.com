@@ -4,7 +4,7 @@ import { Amplify, withAuthenticator } from 'aws-amplify';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
-import Dashboard from './Dashboard';
+import Dashboard from './components/Dashboard';
 
 import './App.css';
 
