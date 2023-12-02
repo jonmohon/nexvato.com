@@ -33,6 +33,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh; /* Adjust as needed */
+  background-color: #07081c;
 }
 
 @keyframes App-logo-spin {
