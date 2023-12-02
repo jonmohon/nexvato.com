@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nexvato-dev-162028-authRole",
+      "UnauthRoleArn": "arn:aws:iam::308561043671:role/amplify-nexvato-dev-162028-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::308561043671:role/amplify-nexvato-dev-162028-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-nexvato-dev-162028-deployment",
+      "UnauthRoleName": "amplify-nexvato-dev-162028-unauthRole",
+      "StackName": "amplify-nexvato-dev-162028",
+      "StackId": "arn:aws:cloudformation:us-west-2:308561043671:stack/amplify-nexvato-dev-162028/d6ab5c40-9097-11ee-9649-060b5635fd2f",
+      "AmplifyAppId": "d2g2b34ev587go"
+    },
+    "categories": {
+      "auth": {
+        "nexvatoe2a8e9c5": {}
+      }
+    }
+  }
+}
