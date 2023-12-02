@@ -1,24 +1,38 @@
+// App.js
 import React from 'react';
-import { Amplify } from 'aws-amplify';
-import { Authenticator } from '@aws-amplify/ui-react';
+import { Amplify, withAuthenticator } from 'aws-amplify';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
+import Dashboard from './Dashboard';
 
-import './App.css'; // Import your CSS file
+import './App.css';
 
 Amplify.configure(awsExports);
 
-export default function App() {
-  return (
-    <div className="app-container">
-      <Authenticator>
-        {({ signOut, user }) => (
-          <main>
-            <h1>Hello {user ? user.username : 'Guest'}</h1>
-            <button onClick={signOut}>Sign out</button>
-          </main>
+const App = () => (
+  <div className="app-container">
+    <Router>
+      <Route exact path="/">
+        <Redirect to="/dashboard" />
+      </Route>
+      <Route path="/dashboard">
+        {({ history }) => (
+          <Authenticator
+            onStateChange={(authState) => {
+              if (authState === 'signIn') {
+                history.push('/dashboard');
+              }
+            }}
+          >
+            {({ signOut, user }) => (
+              <Dashboard user={user} signOut={signOut} />
+            )}
+          </Authenticator>
         )}
-      </Authenticator>
-    </div>
-  );
-}
+      </Route>
+    </Router>
+  </div>
+);
+
+export default withAuthenticator(App);
