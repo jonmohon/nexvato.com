@@ -1,15 +1,13 @@
-// src/components/Dashboard.js
 import React from 'react';
+import '../pages/Dashboard.css';
 
-const Dashboard = () => {
+const Dashboard = ({ signOut, user }) => {
   return (
     <div>
-      {({ signOut, user }) => (
-          <main>
-            <h1>Hello {user ? user.username : 'Guest'}</h1>
-            <button onClick={signOut}>Sign out</button>
-          </main>
-        )}
+      <main>
+        <h1>Hello {user ? user.username : 'Guest'}</h1>
+        <button onClick={signOut}>Sign out</button>
+      </main>
     </div>
   );
 };

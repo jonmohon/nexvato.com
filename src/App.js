@@ -11,9 +11,9 @@ Amplify.configure(awsExports);
 
 const App = () => {
   return (
-    <div className="app-container"> {/* Use className instead of style */}
+    <div className="app-container">
       <Authenticator>
-        
+        <Dashboard/>
       </Authenticator>
     </div>
   );
