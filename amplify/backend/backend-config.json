@@ -1,6 +1,6 @@
 {
   "auth": {
-    "nexvatoe2a8e9c5": {
+    "nexvato8b950ca9": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -28,6 +28,55 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "nexvatoe2a8e9c5CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_nexvatoe2a8e9c5CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nexvatoe2a8e9c5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_nexvatoe2a8e9c5CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nexvatoe2a8e9c5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_nexvatoe2a8e9c5CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nexvatoe2a8e9c5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_nexvatoe2a8e9c5CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nexvatoe2a8e9c5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_nexvatoe2a8e9c5CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nexvatoe2a8e9c5CustomMessage"
+        }
+      ]
     }
   }
 }

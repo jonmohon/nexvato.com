@@ -9,11 +9,21 @@
       "UnauthRoleName": "amplify-nexvato-dev-162028-unauthRole",
       "StackName": "amplify-nexvato-dev-162028",
       "StackId": "arn:aws:cloudformation:us-west-2:308561043671:stack/amplify-nexvato-dev-162028/d6ab5c40-9097-11ee-9649-060b5635fd2f",
-      "AmplifyAppId": "d2g2b34ev587go"
+      "AmplifyAppId": "d2g2b34ev587go",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-nexvato-dev-162028-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
+      "function": {
+        "nexvatoe2a8e9c5CustomMessage": {
+          "REDIRECTURL": "https://app.nexvator.com/dashboard",
+          "EMAILSUBJECT": "Please confirm your account",
+          "EMAILMESSAGE": "Click the link",
+          "deploymentBucketName": "amplify-nexvato-dev-162028-deployment",
+          "s3Key": "amplify-builds/nexvatoe2a8e9c5CustomMessage-544c30314a6153577043-build.zip"
+        }
+      },
       "auth": {
-        "nexvatoe2a8e9c5": {}
+        "nexvato8b950ca9": {}
       }
     }
   }
