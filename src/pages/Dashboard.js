@@ -4,9 +4,12 @@ import React from 'react';
 const Dashboard = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <p>Welcome to your dashboard! test</p>
-      {/* Dashboard content goes here */}
+      {({ signOut, user }) => (
+          <main>
+            <h1>Hello {user ? user.username : 'Guest'}</h1>
+            <button onClick={signOut}>Sign out</button>
+          </main>
+        )}
     </div>
   );
 };
