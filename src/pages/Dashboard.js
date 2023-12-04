@@ -1,11 +1,15 @@
+// Dashboard.js
 import React from 'react';
-import '../pages/Dashboard.css';
+import { useAuth } from '../contexts/AuthContext'; // Adjust the path accordingly
+import './Dashboard.css';
 
-const Dashboard = ({ signOut, user }) => {
+const Dashboard = () => {
+  const { user, signOut } = useAuth();
+
   return (
-    <div>
+    <div className="dashboard-container">
       <main>
-        <h1>Hello {user ? user.username : 'Guest'}</h1>
+        <h1>Hello {user ? user.username : 'Guest test'}</h1>
         <button onClick={signOut}>Sign out</button>
       </main>
     </div>
